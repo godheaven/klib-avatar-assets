@@ -4,17 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.godheaven</groupId>
+    <parent>
+        <groupId>cl.kanopus</groupId>
+        <artifactId>kanopus-core-parent</artifactId>
+        <version>4.06.3</version>
+    </parent>
+
+    <groupId>cl.kanopus.util</groupId>
     <artifactId>klib-avatar-assets</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>klib-avatar-assets</name>
-    <description>Kanopus Avatar Assets Library – a lightweight Java resource bundle providing high-quality avatar images (SVG/PNG) for offline and on-premise applications, designed for seamless integration across the Kanopus ecosystem.</description>
+    <description>Kanopus Avatar Assets Library – a lightweight resource bundle providing high-quality avatar images (SVG/PNG) for offline and on-premise applications.</description>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
