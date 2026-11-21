@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
 
     <name>klib-avatar-assets</name>
-    <description>Kanopus Avatar Assets Library – a lightweight resource bundle providing high-quality avatar images (SVG/PNG) for offline and on-premise applications.</description>
+    <description>Kanopus Avatar Assets Library – a lightweight resource bundle providing high-quality avatar images (PNG) for offline and on-premise applications.</description>
 
     <url>https://github.com/godheaven/klib-avatar-assets</url>
 

@@ -11,7 +11,7 @@ This library is part of the Kanopus ecosystem and provides a curated collection 
 ## ✨ Features
 
 - **High-Quality Icons**: Hand-picked, premium avatar icons.
-- **Optimized for Avatars**: PNG files (250x250) with white silhouettes and transparent backgrounds, ready for custom background styling.
+- **Optimized for Avatars**: square PNG files (between 180x180 and 324x324 px) with white silhouettes and transparent backgrounds, ready for custom background styling.
 - **Resource Bundle**: Easily accessible through the classpath as a lightweight resource JAR.
 - **Eco-system Ready**: Designed to work perfectly with other Kanopus libraries or as a standalone asset collection.
 
@@ -31,8 +31,22 @@ Add the dependency to your `pom.xml`:
 
 The images are located in the classpath under `kanopus/avatars/`. You can load them directly using your preferred resource loading mechanism.
 
+### Java API (since 4.20.0)
+
+```java
+AvatarCatalog catalog = AvatarCatalog.load();
+
+catalog.categories();                         // [animals, aztecs, celts, ...]
+String path = catalog.pick("user-42");        // stable avatar for a user id / e-mail
+String viking = catalog.pick("user-42", "vikings");
+byte[] png = catalog.readBytes(path);
+try (InputStream in = catalog.open(path)) { /* stream it */ }
+```
+
+Only paths listed in `index.txt` can be opened.
+
 ### Resource Structure
-- `kanopus/avatars/index.txt`: A list of available avatar categories and seeds.
+- `kanopus/avatars/index.txt`: one classpath path per line for every bundled avatar.
 - `kanopus/avatars/[category]/`: Directories containing the PNG assets.
 
 ## 👤 Author
